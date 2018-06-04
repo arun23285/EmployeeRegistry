@@ -90,8 +90,8 @@ echo Handling node.js deployment.
 
 :: 0. Create empty lib\app.js to make KuduSync happy
 :: see https://github.com/projectkudu/kudu/issues/1753
-call :ExecuteCmd mkdir "%DEPLOYMENT_SOURCE%\src\lib"
-call :ExecuteCmd copy NUL "%DEPLOYMENT_SOURCE%\src\lib\app.js"
+call :ExecuteCmd mkdir "%DEPLOYMENT_SOURCE%"
+call :ExecuteCmd copy NUL "%DEPLOYMENT_SOURCE%\app.js"
 
 :: 2. Select node version
 call :SelectNodeVersion
