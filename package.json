@@ -6,8 +6,7 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "start": "node index.html"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
