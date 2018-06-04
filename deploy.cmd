@@ -88,10 +88,6 @@ goto :EOF
 :Deployment
 echo Handling node.js deployment.
 
-:: 0. Create empty lib\app.js to make KuduSync happy
-:: see https://github.com/projectkudu/kudu/issues/1753
-call :ExecuteCmd mkdir "%DEPLOYMENT_SOURCE%"
-call :ExecuteCmd copy NUL "%DEPLOYMENT_SOURCE%\app.js"
 
 :: 2. Select node version
 call :SelectNodeVersion
@@ -118,7 +114,7 @@ popd
 
 :: 1. KuduSync
 IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
-  call :ExecuteCmd "%KUDU_SYNC_CMD%" -v 50 -f "%DEPLOYMENT_SOURCE%\src" -t "%DEPLOYMENT_TARGET%" -n "%NEXT_MANIFEST_PATH%" -p "%PREVIOUS_MANIFEST_PATH%" -i ".git;.hg;.deployment;deploy.cmd"
+  call :ExecuteCmd "%KUDU_SYNC_CMD%" -v 50 -f "%DEPLOYMENT_SOURCE%" -t "%DEPLOYMENT_TARGET%" -n "%NEXT_MANIFEST_PATH%" -p "%PREVIOUS_MANIFEST_PATH%" -i ".git;.hg;.deployment;deploy.cmd"
   IF !ERRORLEVEL! NEQ 0 goto error
 )
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
