@@ -30,7 +30,7 @@
     "typescript": "~2.7.2"
   }, 
   "engines" : { 
-    "node" : ">=0.12" 
+    "node" : "10.0.0" 
     },
   "devDependencies": {
     "@angular/compiler-cli": "^6.0.3",
