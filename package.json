@@ -12,22 +12,26 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^6.0.3",
+    "@angular/cli": "~6.0.7",
     "@angular/common": "^6.0.3",
     "@angular/compiler": "^6.0.3",
+    "@angular/compiler-cli": "^6.0.3",
     "@angular/core": "^6.0.3",
     "@angular/forms": "^6.0.3",
     "@angular/http": "^6.0.3",
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
+    "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
+    "es5-shim": "^4.5.10",
+    "es6-shim": "^0.35.3",
     "ngx-toaster": "^1.0.1",
     "ngx-toastr": "^8.7.3",
     "rxjs": "^6.0.0",
-    "zone.js": "^0.8.26",
-    "@angular/compiler-cli": "^6.0.3",
-    "@angular/cli": "~6.0.7",
-    "typescript": "~2.7.2"
+    "typescript": "~2.7.2",
+    "web-animations-js": "^2.3.1",
+    "zone.js": "^0.8.26"
   },
   "engines": {
     "node": "10.0.0"
